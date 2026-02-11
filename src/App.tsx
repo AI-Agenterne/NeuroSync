@@ -1512,6 +1512,7 @@ const ActiveSession = () => {
     SHIELD: 'glowPulseSlow 5s ease-in-out infinite',
     CONNECT: 'breatheGlow 10s ease-in-out infinite',
     RECOVERY: 'breatheGlow 8s ease-in-out infinite',
+    DEEP_WORK: 'glowPulse 3s ease-in-out infinite',
   };
 
   return (
@@ -1877,7 +1878,7 @@ const MainLayout = () => {
         {!initialized && <InitializeGate />}
         {initialized && mode === 'IDLE' && <HomeScreen />}
         {initialized &&
-          ['OVERCLOCK', 'SHIELD', 'CONNECT', 'RECOVERY'].includes(mode) && (
+          ['OVERCLOCK', 'SHIELD', 'CONNECT', 'RECOVERY', 'DEEP_WORK'].includes(mode) && (
             <ActiveSession />
           )}
         {initialized && mode === 'LOCKOUT' && <LockoutScreen />}
